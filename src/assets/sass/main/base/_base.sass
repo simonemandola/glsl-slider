@@ -1,0 +1,60 @@
+@font-face
+    font-display: swap
+
+body
+    font-family: Arial, sans-serif
+    font-size: 1rem
+    font-weight: 400
+    color: $color--white
+    overflow: hidden
+
+.canvas
+    position: fixed
+    inset: 0
+    z-index: -1
+    max-width: 100%
+    max-height: 100%
+    outline: none
+
+// top bar
+.top-bar
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    height: $gap--m
+    background-color: $color--black
+    padding: $gap--s
+    border-bottom: 2px solid $color--beige
+    display: grid
+    grid-template-columns: max-content min-content $gap--l
+    align-items: center
+    column-gap: $gap--s
+
+    &__loop
+        display: flex
+        align-items: center
+        column-gap: $gap--xxs
+        cursor: pointer
+
+        & > input
+            -webkit-appearance: auto
+
+// nav bar
+.nav-bar
+    display: grid
+    grid-template-columns: repeat(2, max-content)
+    column-gap: $gap--xxl
+    position: absolute
+    bottom: $gap--m
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 10
+
+    &__button
+        padding: $gap--xxs $gap--xs
+        border-radius: $border--radius--m
+        background-color: transparentize($color--black, .6)
+        transition: $transition--main
+        &:hover
+            background-color: transparentize($color--black, .2)

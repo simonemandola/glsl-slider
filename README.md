@@ -1,2 +1,13 @@
-# glsl-slider
-A simple slider with GLSL and Three.js
+# GLSL Slider - 30 Transitions
+
+Install dependencies:
+```
+npm install
+```
+
+Run:
+```
+npm run dev
+```
+Then open:
+http://localhost:5173/
