@@ -14,6 +14,4 @@ http://localhost:5173/
 
 ## Video preview:
 
-<video controls playsinline muted loop autoplay>
-  <source src="public/assets/glsl-slider-preview.mp4" type="video/mp4">
-</video>
+https://github.com/simonemandola/glsl-slider/blob/main/public/assets/glsl-slider-preview.mp4
