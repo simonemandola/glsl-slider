@@ -42,7 +42,6 @@
       <input type="checkbox" checked @change="loopEmit" name="loop">
       <span class="text--body">Loop</span>
     </label>
-    <a href="https://github.com/simonemandola/glsl-slider" class="text--body text--white" target="_blank" rel="noreferrer">About</a>
   </div>
 </template>
 
