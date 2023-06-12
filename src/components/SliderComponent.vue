@@ -4,28 +4,18 @@
       antialias
       resize="window"
   >
-    <Camera ref="camera" :fov="35" :far="100" :near="0.1"/>
+    <Camera/>
     <Scene ref="scene">
-      <AmbientLight ref="ambientLight" :intensity="1" />
     </Scene>
   </Renderer>
 </template>
 
 <script setup lang="ts">
 import {onMounted, ref, watch} from "vue";
-import {AmbientLight, Camera, Renderer, Scene} from 'troisjs';
+import {Camera, Renderer, Scene} from 'troisjs';
 import * as THREE from 'three/build/three.module.js';
 import {vertexShader} from "../assets/shader/vertex";
 import {fragmentShader} from "../assets/shader/fragment";
-
-interface TextureImageObject {
-
-  wrapS: number,
-  wrapT: number,
-  minFilter: number,
-  magFilter: number,
-
-}
 
 const props = defineProps<{
   changeTo: number,
@@ -34,7 +24,6 @@ const props = defineProps<{
 }>()
 
 const renderer = ref();
-const camera = ref();
 const scene = ref();
 const loader = new THREE.TextureLoader(undefined);
 let currentSlide = 0;
@@ -114,7 +103,7 @@ onMounted(()=> {
     const resolution = new THREE.Vector2(window.innerWidth, window.innerHeight);
 
     const elapsedTime = clock.getElapsedTime();
-    const deltaTime = elapsedTime - time;
+    //const deltaTime = elapsedTime - time;
     time = elapsedTime;
 
     if (isAnimating) {
