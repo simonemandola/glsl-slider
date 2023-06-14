@@ -1,5 +1,7 @@
 # GLSL Slider - 30 Transitions
 
+>Live here: https://glsl-slider.netlify.app/
+
 Install dependencies:
 ```
 npm install
