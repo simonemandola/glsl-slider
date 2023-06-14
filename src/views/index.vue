@@ -4,7 +4,7 @@
 </template>
 <script setup lang="ts">
 import SliderComponent from "../components/SliderComponent.vue";
-import UiComponent from "../components/uiComponent.vue";
+import UiComponent from "../components/UiComponent.vue";
 import {ref} from "vue";
 
 const changeTo = ref(0);

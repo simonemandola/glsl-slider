@@ -7,7 +7,7 @@
     <p class="text--body">Style</p>
     <select class="top-bar__transitions" name="LeaveType" @change="transitionTypeEmit($event)">
       <option value="-1" selected>None</option>
-      <option value="0" >Fade</option>
+      <option value="0">Fade</option>
       <option value="1">Circle center</option>
       <option value="2">Circle top right</option>
       <option value="3">Circle top left</option>

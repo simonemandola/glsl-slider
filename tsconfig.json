@@ -15,7 +15,7 @@
     "allowJs": true,
     "types": ["three"],
   },
-  "include": ["src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "exclude": ["node_modules", "dist", "test"],
 }
