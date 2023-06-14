@@ -31,6 +31,9 @@ body
     align-items: center
     column-gap: $gap--s
 
+    @media screen and (max-width: $breakpoint--mobile-l)
+        grid-template-columns: max-content $gap--xl $gap--l min-content
+
     &__loop
         display: flex
         align-items: center
