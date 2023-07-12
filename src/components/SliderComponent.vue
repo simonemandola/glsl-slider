@@ -30,7 +30,7 @@ let currentSlide = 0;
 let nextSlide = 0;
 let progress = 0;
 let direction = 0;
-const velocity = 0.04;
+const velocity = 0.005;
 const clock = new THREE.Clock();
 let time = clock.getElapsedTime();
 let isAnimating = false;
@@ -107,9 +107,9 @@ onMounted(()=> {
     time = elapsedTime;
 
     if (isAnimating) {
-      progress = THREE.MathUtils.lerp(progress, 1, velocity * 0.5) + 0.01;
+      progress = THREE.MathUtils.lerp(progress, 1, velocity);
     } else {
-      progress = THREE.MathUtils.lerp(progress, -1.5, velocity * 0.5) + 0.01;
+      progress = THREE.MathUtils.lerp(progress, -1, velocity * 1.1);
     }
 
     material.uniforms.u_resolution.value = resolution;
@@ -117,9 +117,9 @@ onMounted(()=> {
     material.uniforms.u_transitionType.value = props.transitionType;
     material.uniforms.u_currentTexture.value = textureData[currentSlide].texture;
     material.uniforms.u_nextTexture.value = textureData[nextSlide].texture;
-    material.uniforms.u_progress.value = progress;
+    material.uniforms.u_progress.value = props.transitionType === "-1" ? 1 : progress * 2;
 
-    if (progress > 1) {
+    if (progress >= 0.75) {
       isAnimating = false;
       currentSlide = nextSlide;
     }
